@@ -1,12 +1,14 @@
 import streamlit as st
-from spacy_streamlit import *
+import spacy
 
 string1 = st.text_input("Your text here")
 
 def trsf(f):
   
   l =[]
-  doc = process_text('en_core_web_sm', f)
+  import en_core_web_sm
+  nlp = en_core_web_sm.load()
+  doc = nlp(f)
   for sent in doc.sents:
       print(sent)
       l+=[sent]
