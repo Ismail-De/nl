@@ -10,13 +10,12 @@ def trsf(f):
   nlp = en_core_web_sm.load()
   doc = nlp(f)
   for sent in doc.sents:
-      print(sent)
       l+=[sent]
 
-  m = string1.index(l[0])
-  mm = string1.index(l[-1])
-  string1 = string1[m + len(l[0]) : mm] 
-  return string1
+  m = f.index(str(l[0]))
+  mm = f.index(str(l[-1]))
+  f = f[m + len(str(l[0])) : mm] 
+  return f
 
 
 st.write(trsf(string1))
