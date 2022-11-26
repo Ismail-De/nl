@@ -3,7 +3,7 @@ import spacy
 
 nlp = spacy.load('en_core_web_sm')
 
-string1 = st.write("Your text here")
+string1 = st.text_input("Your text here")
 
 def trsf(f):
   l =[]
