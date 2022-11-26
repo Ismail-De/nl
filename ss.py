@@ -17,5 +17,6 @@ def trsf(f):
   f = f[m + len(str(l[0])) : mm] 
   return f
 
-
-st.write(trsf(string1))
+butt = st.button('Transform')
+if butt:
+  st.write(trsf(string1))
